@@ -63,6 +63,7 @@ namespace PromotionEngine_v2
             productC.comboDiscountPrice = 0;
             productC.requiredNumberOfItems = 0;
             productC.freeProduct = productD;
+            // Made this change to give one free product of additional item in offer
             productD.quantity = -1;
             productC.additionalItemDiscountPrice = 30;
             productC.discountList = new List<string>();

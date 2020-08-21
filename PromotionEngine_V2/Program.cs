@@ -30,22 +30,37 @@ namespace PromotionEngine_V2
             string quantity_A = Console.ReadLine();
             int.TryParse(quantity_A, out productA_quantity);
             productOperations.productA.quantity = productOperations.productA.quantity + productA_quantity;
+            if (productOperations.productA.quantity == 0)
+            {
+                productOperations.productA.freeProduct.quantity = 0;
+            }
 
             Console.WriteLine("Enter Quantity of Product B");
             string quantity_B = Console.ReadLine();
             int.TryParse(quantity_B, out productB_quantity);
             productOperations.productB.quantity = productOperations.productB.quantity + productB_quantity;
+            // This block is needed because if main item quantity is 0 then we can't give C+D offer
+            if (productOperations.productB.quantity == 0)
+            {
+                productOperations.productB.freeProduct.quantity = 0;
+            }
 
             Console.WriteLine("Enter Quantity of Product C");
             string quantity_C = Console.ReadLine();
             int.TryParse(quantity_C, out productC_quantity);
             productOperations.productC.quantity = productOperations.productC.quantity + productC_quantity;
-
+            if(productOperations.productC.quantity == 0)
+            {
+                productOperations.productC.freeProduct.quantity = 0;
+            }
             Console.WriteLine("Enter Quantity of Product D");
             string quantity_D = Console.ReadLine();
             int.TryParse(quantity_D, out productD_quantity);
             productOperations.productD.quantity = productOperations.productD.quantity + productD_quantity;
-
+            if (productOperations.productD.quantity == 0)
+            {
+                productOperations.productD.freeProduct.quantity = 0;
+            }
 
             foreach (Product product in productOperations.cartProducts)
             {
