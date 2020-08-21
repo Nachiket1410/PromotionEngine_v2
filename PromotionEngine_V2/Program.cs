@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// I have not written unit test cases as part of this project because discount logic is pretty same 
+// So you can consider Unit test for approach 1 that I have submitted earlier.
 namespace PromotionEngine_V2
 {
     class Program
